@@ -27,7 +27,6 @@ class TeamStats:
 
 # Configure logger
 logger = logging.getLogger(__name__)
-
 class TeamSimulator:
     def __init__(self, iterations: int = 10000):
         self.iterations = iterations
@@ -35,6 +34,9 @@ class TeamSimulator:
 
     def simulate_matchup(self, home: TeamStats, away: TeamStats) -> Dict[str, Any]:
         """Simulate a matchup between two teams and return win probability and stat margins."""
+        if not home.mean_stats or not away.mean_stats:
+            raise SimulationError(f"Invalid team stats for {home.team} vs {away.team}")
+
         try:
             results = []
             for i in range(self.iterations):
@@ -61,8 +63,9 @@ class TeamSimulator:
 
             # Compute probabilities
             win_prob = np.mean(np.array(results) > 0)
-            avg_margin = {k: np.mean([r for r in results]) for k in ["score"]}
-            logger.info("Simulation complete: %s vs %s | Win Prob (Home): %.2f%%", home.team, away.team, win_prob*100)
+            avg_margin = {k: np.mean(results) for k in ["score"]}
+            logger.info("Simulation complete: %s vs %s | Win Prob (Home): %.2f%%",
+                        home.team, away.team, win_prob * 100)
 
             return {
                 "home_team": home.team,
@@ -75,4 +78,5 @@ class TeamSimulator:
         except Exception as e:
             logger.exception("Error during matchup simulation: %s", e)
             raise SimulationError(f"Simulation failed for {home.team} vs {away.team}: {e}") from e
+
 
