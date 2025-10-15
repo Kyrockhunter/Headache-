@@ -1,0 +1,18 @@
+# config/settings.yaml
+version: "4.0.0"
+
+simulation:
+  iterations: 10000
+  random_seed: 42
+
+feature_weights:
+  turnovers: 0.45
+  third_down: 0.35
+  yards_per_pass: 0.30
+  first_downs: 0.25
+  sacks: 0.15
+  penalties: 0.10
+
+logging:
+  level: INFO
+  log_file: "logs/fantasy_v4.log"
