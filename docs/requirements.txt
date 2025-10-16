@@ -1,0 +1,8 @@
+# Fantasy Optimizer Requirements (Python 3.13.7)
+# Maintained by KyRockHunter — v4.3.0
+
+pandas>=2.2.0
+numpy>=1.26.0
+pulp>=2.7.0
+scipy>=1.13.0
+pytest>=8.3.0
