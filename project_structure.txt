@@ -1,0 +1,72 @@
+﻿|-- config
+    |-- logging.yaml
+    |-- settings.yaml
+|-- data
+    |-- exports
+    |-- Games
+        |-- Week 7
+            |-- Results
+                |-- contest-standings-183502505.csv
+    |-- Lineup Exports DK COMP
+        |-- contest-standings-183502505.csv
+    |-- logs
+    |-- outputs
+        |-- cleaned_players_20251015_203321.csv
+        |-- cleaned_players_20251015_211206.csv
+        |-- test_summary_20251015_203321.txt
+        |-- test_summary_20251015_211206.txt
+    |-- processed
+    |-- raw
+        |-- DKSalaries (3).csv
+|-- docs
+    |-- ARCHITECTURE.md
+    |-- CHANGELOG.md
+    |-- CONTRIBUTING.md
+    |-- LOGFILE_2025-10-15.md
+    |-- requirements.txt
+    |-- Roadmap.md
+|-- logs
+|-- output
+|-- src
+    |-- consistency
+        |-- gitkeep.py
+        |-- __init__.py
+    |-- data
+        |-- data_ingestion.py
+        |-- __init__.py
+    |-- optimizer
+        |-- gitkeep.py
+        |-- optimizer.py
+        |-- __init__.py
+    |-- simulator
+        |-- gitkeep.py
+        |-- __init__.py
+    |-- tools
+        |-- cleaner.py
+        |-- run_framework_tests_fixed.py
+    |-- utils
+        |-- config_loader.py
+    |-- correlated_simulator.py
+    |-- player_adjustment.py
+    |-- team_simulation.py
+    |-- utils.py
+    |-- __init__.py
+|-- tests
+    |-- conftest.py
+    |-- test_correlated_simulator.py
+    |-- test_optimizer.py
+    |-- test_team_simulation.py
+|-- .gitignore
+|-- main.py
+|-- players_example.csv
+|-- project_structure.txt
+|-- pytest.ini
+|-- README.md
+|-- README_MAIN.md
+|-- refactor_update_log.txt
+|-- requirements.txt
+|-- run_fantasy_v4.ps1
+|-- run_framework_tests.py
+|-- sample_players.csv
+|-- setup_refractor.py
+|-- setup_venv.ps1

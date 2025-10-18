@@ -1,0 +1,33 @@
+Refactor Update Log - 2025-10-17 18:32:08
+======================================================================
+
+[BACKUP] backup_before_refactor_2025-10-17_1831
+    → Reason: Created pre-refactor backup of project.
+[ADDED] src\consistency\__init__.py
+    → Reason: Ensures Python recognizes this folder as a module.
+[ADDED] src\data\__init__.py
+    → Reason: Ensures Python recognizes this folder as a module.
+[ADDED] src\optomizer\__init__.py
+    → Reason: Ensures Python recognizes this folder as a module.
+[ADDED] src\simulator\__init__.py
+    → Reason: Ensures Python recognizes this folder as a module.
+[ADDED] src\__pycache__\__init__.py
+    → Reason: Ensures Python recognizes this folder as a module.
+[RENAMED] C:\Users\James\Python\fantasy_v4\src\optomizer → C:\Users\James\Python\fantasy_v4\src\optimizer
+    → Reason: Fixes spelling to match standard imports.
+[MOVED] C:\Users\James\Python\fantasy_v4\cleaner.py → C:\Users\James\Python\fantasy_v4\src\tools\cleaner.py
+    → Reason: Centralized loose utility scripts into src/tools/.
+[MOVED] C:\Users\James\Python\fantasy_v4\run_framework_tests_fixed.py → C:\Users\James\Python\fantasy_v4\src\tools\run_framework_tests_fixed.py
+    → Reason: Centralized loose utility scripts into src/tools/.
+[ADDED] data\processed
+    → Reason: Creates consistent data subfolder structure.
+[ADDED] data\exports
+    → Reason: Creates consistent data subfolder structure.
+[ADDED] data\logs
+    → Reason: Creates consistent data subfolder structure.
+[ADDED] src\utils\config_loader.py
+    → Reason: Creates centralized YAML + logging configuration loader.
+
+Summary:
+----------------------------------------------------------------------
+Total Changes: 13
