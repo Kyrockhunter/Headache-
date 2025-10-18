@@ -1,5 +1,5 @@
 # config/settings.yaml
-version: "4.0.0"
+version: "4.1.1"
 
 simulation:
   iterations: 10000
@@ -16,3 +16,10 @@ feature_weights:
 logging:
   level: INFO
   log_file: "logs/fantasy_v4.log"
+
+
+consistency:
+  min_games: 2
+  min_mean_threshold: 0.5
+  max_std_ratio: 5.0
+  apply_weighting: true

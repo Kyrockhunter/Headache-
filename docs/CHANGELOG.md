@@ -1,36 +1,18 @@
-# Changelog — Fantasy Optimizer
-**Maintained by:** KyRockHunter  
-**Repository:** `KyRockHunter/fantasy_v4`  
-**Version Format:** Semantic Versioning (vMAJOR.MINOR.PATCH)  
-**Python:** 3.13.7  
+# FantasyV4 Changelog
 
----
-
-## [v4.3.0] — 2025-10-16
+## [v4.1.1] — 2025-10-18
 ### Added
-- HybridLineupSelector (integrated optimizer + simulator)
-- Modular project structure (`src/` cleanup and imports)
-- Centralized `ARCHITECTURE.md` with data flow diagrams
+- `build_week_via_master.py` wrapper for robust weekly dataset generation.
+- Adaptive ingestion (v7) capable of detecting nflreadpy argument variations automatically.
+- Logging improvements for clarity in data load and file save operations.
 
 ### Changed
-- `optimizer.py` refactored for new `run()` + `optimize()` aliases
-- `correlated_simulator.py` updated with `p95` output and correlation priors
-- Roster rules now true to DK Classic (FLEX = RB/WR/TE)
+- Simplified data retrieval pipeline to rely on stable local `weekly_master` builds.
+- Updated project directory references (`ROOTDIR`, `DATA_PROCESSED`, `LOG_FILE`) for universal compatibility.
 
 ### Fixed
-- Compatibility with updated tests and fallback lineup generator
-- Proper column alignment in simulation outputs
+- Eliminated dataset duplication issue during multiple same-week pulls (pending idempotent merge v2).
+- Corrected path resolution fallback when `root_dir` not explicitly defined in `settings.yaml`.
 
-### Documentation
-- Added `/docs/` directory with CONTRIBUTING and CHANGELOG
-- Added doc index at top of `ARCHITECTURE.md`
-
----
-
-## [v4.2.0] — 2025-09-30
-- Early hybrid testing version with partial modular integration
-
-## [v4.1.0] — 2025-08-10
-- Stable optimizer and simulator baseline
-
----
+### Next Step
+- Implement `historical_merge v2` to ensure week-level deduplication and replacement safety.
